@@ -12,6 +12,8 @@ while True:
                 print(x.capitalize())
         case 'exit':
             break
+        case _:
+            print("Unknown command!!")
 
 print('Bye')
 
