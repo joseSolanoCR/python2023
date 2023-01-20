@@ -1,12 +1,18 @@
-todos = []
-
+file = open('todos.txt', 'r')
+todos = file.readlines()
+file.close()
+for l in todos:
+    print(l)
 while True:
     user_action = input("type add, edit, complete or show: ")
 
     match user_action:
         case 'add':
-            todo = input("Enter a todo: ")
+            todo = input("Enter a todo: ") + '\n'
             todos.append(todo)
+            file = open('todos.txt', 'w')
+            file.writelines(todos)
+            file.close()
         case 'show':
             for index, x in enumerate(todos):
                 print(f"{index}. {x}")
