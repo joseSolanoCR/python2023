@@ -1,2 +1,4 @@
-print("hola mundo!!")
+with open('todos.txt', 'r') as file :
+    todos = file.readlines()
+
 
